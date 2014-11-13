@@ -45,7 +45,7 @@ heroku config:set APP_SETTINGS=config.ProductionConfig --remote pro
 At this point, heroku config should look something like
 ```bash
 
-APP_SETTINGS:               config.stagingConfig
+APP_SETTINGS:               config.StagingConfig
 DATABASE_URL:               postgres://hjoufhlaxlwscd:SqPLHkGa-HNy2iLnULPKb-TiXy@ec2-54-204-43-138.compute-1.amazonaws.com:5432/d9vfvqnfm0i9gf
 HEROKU_POSTGRESQL_NAVY_URL: postgres://hjoufhlaxlwscd:SqPLHkGa-HNy2iLnULPKb-TiXy@ec2-54-204-43-138.compute-1.amazonaws.com:5432/d9vfvqnfm0i9gf
 
