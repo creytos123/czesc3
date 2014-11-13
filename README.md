@@ -32,3 +32,21 @@ and in the Python REPL:
 ```
 
 For a detailed introduction see [http://blog.y3xz.com/blog/2012/08/16/flask-and-postgresql-on-heroku/](http://blog.y3xz.com/blog/2012/08/16/flask-and-postgresql-on-heroku/).
+
+## Configurations
+See the multi-part tutorial [https://realpython.com/blog/python/flask-by-example-integrating-flask-and-angularjs/](https://realpython.com/blog/python/flask-by-example-integrating-flask-and-angularjs/) for details on creating configuration files and environment variables for running in local, staging, and production.
+
+## Heroku environment variables (assuming separate staging and production heroku apps)
+```bash
+heroku config:set APP_SETTINGS=config.StagingConfig --remote stage
+heroku config:set APP_SETTINGS=config.ProductionConfig --remote pro
+```
+
+At this point, heroku config should look something like
+```bash
+
+APP_SETTINGS:               config.stagingConfig
+DATABASE_URL:               postgres://hjoufhlaxlwscd:SqPLHkGa-HNy2iLnULPKb-TiXy@ec2-54-204-43-138.compute-1.amazonaws.com:5432/d9vfvqnfm0i9gf
+HEROKU_POSTGRESQL_NAVY_URL: postgres://hjoufhlaxlwscd:SqPLHkGa-HNy2iLnULPKb-TiXy@ec2-54-204-43-138.compute-1.amazonaws.com:5432/d9vfvqnfm0i9gf
+
+```
